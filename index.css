@@ -1,24 +1,25 @@
-body{
-  width: 100vw;
-  height: 100vh;
-  margin:0;
-  background: black;
-}
-.video-wrapper{
-  width: 100vw;
-  height: 100vh;
+body {
+    margin: 0;
+    background: black;
 }
 
-.video-wrapper .video{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+canvas {
+  z-index: 1;
+  position: absolute;
 }
 
+video {
+  z-index: -1;
+  position: absolute;
+}
 
-.video-wrapper .video iframe{
+img {
+  display: none;
+  z-index: -2;
+  height: 2em;
+}
+
+.fullSize {
   width: 100vw;
   height: 100vh;
 }
