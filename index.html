@@ -4,17 +4,14 @@
     <meta charset="utf-8">
     <title>Palta.Rocks</title>
     <link rel="stylesheet" href="./index.css" media="screen" title="no title" charset="utf-8">
+    <script src="./index.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="video-wrapper">
-      <div class="video">
-        <iframe
-          src="http://www.youtube.com/embed/JNsKvZo6MDs?autoplay=1&loop=1&controls=0"
-          frameborder="0"
-          allowfullscreen
-        >
-        </iframe>​
-      </div>
-    </div>
+    <canvas id="canvas" class="fullSize"></canvas>
+    <video autoplay loop class="fullSize" id="video">
+      <source src="./avocado.mp4" type="video/mp4">
+      <span>Your browser does not support the video tag.</span>
+    </video>
+    <img src="./avocado.svg" alt="avocado" id="avocado" />
   </body>
 </html>
