@@ -9,10 +9,19 @@ document.addEventListener('DOMContentLoaded', function() {
   canvas.width = cw;
   canvas.height = ch;
 
+  var drawing = false;
+  canvas.addEventListener("mousedown", function(e) {
+    drawing = true;
+  });
+  canvas.addEventListener("mouseup", function(e) {
+    drawing = false;
+  });
   canvas.addEventListener('mousemove', function(e) {
-    var mousePosition = getMousePosition(canvas, e);
-    var size = Math.floor(Math.random() * 30) + 20;
-    context.drawImage(image, mousePosition.x, mousePosition.y, size, size);
+    if (drawing) {
+      var mousePosition = getMousePosition(canvas, e);
+      var size = Math.floor(Math.random() * 30) + 20;
+      context.drawImage(image, mousePosition.x, mousePosition.y, size, size);
+    }
   })
   function getMousePosition(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
