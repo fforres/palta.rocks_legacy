@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "./node_modules/.bin/reload"
+  },
+  "dependencies": {
+    "global": "^4.3.1",
+    "reload": "^1.0.1"
+  },
+  "license": "MIT",
+  "name": "PALTA.ROCKS"
+}
