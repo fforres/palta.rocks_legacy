@@ -1,12 +1,6 @@
 body {
-    margin: 0;
-    background: black;
-}
-
-#mobile {
-  display: none;
-  z-index: 2;
-  position: absolute;
+  margin: 0;
+  background: black;
 }
 
 canvas {
@@ -25,6 +19,14 @@ img {
   height: 2em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+  display: inline-block;
+}
+
 .fullSize {
   width: 100vw;
   height: 100vh;
@@ -40,10 +42,8 @@ img {
   background-color: rgba(0,0,0,0.9);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  display: inline-block;
+#mobile {
+  display: none;
+  z-index: 2;
+  position: absolute;
 }
