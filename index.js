@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   canvas.addEventListener("touchstart", function (e) {
-    play();
     var touch = e.touches[0];
     var mouseEvent = new MouseEvent("mousedown", {
       clientX: touch.clientX,
@@ -67,4 +66,12 @@ document.addEventListener('DOMContentLoaded', function() {
   if (md.is('iPhone')) {
     mobileNotif.style.display = "flex"
   }
+
+  mobileNotif.addEventListener("mousedown", function() {
+    mobileNotif.style.display = "none";
+    play();
+  });
+  mobileNotif.addEventListener("touchstart", function () {
+    mobileNotif.dispatchEvent(new MouseEvent("mousedown"));
+  }, false);
 });
