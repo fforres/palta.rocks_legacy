@@ -2,6 +2,7 @@
   "scripts": {
     "start": "./node_modules/.bin/reload"
   },
+  "version":"0.0.1",
   "dependencies": {
     "global": "^4.3.1",
     "reload": "^1.0.1"
