@@ -4,20 +4,37 @@
     <meta charset="utf-8">
     <title>Palta.Rocks</title>
     <link rel="stylesheet" href="./index.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./icon.css" media="screen" title="no title" charset="utf-8">
     <script src="./mobile-detect.min.js" charset="utf-8"></script>
     <script src="./index.js" charset="utf-8"></script>
+    <script src="./menu.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body class="fullSize">
     <div id="iphone" class="fullSize notice">
       <h1>Toca la pantalla para inciar</h1>
       <h2>(Sitio hecho para ser disfrutado con audífonos)</h2>
       <h1>Disfruta de la experiencia completa desde un computador o mac</h1>
     </div>
-    <canvas id="canvas" class="fullSize"></canvas>
-    <video autoplay loop class="fullSize" id="video">
-      <source src="./avocado.mp4" type="video/mp4">
-      <span>Your browser does not support the video tag.</span>
-    </video>
+    <div id="iconsOverlay">
+      <a href="#" id="screenShot" class="icon">
+        SCREENSHOT
+      </a>
+      <a href="#" class="icon">
+        MUTE UNMUTE
+      </a>
+    </div>
+    <div id="main" class="fullSize">
+      <div id="menuIcon" class="menu icon container">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <canvas id="canvas" class="fullSize"></canvas>
+      <video autoplay loop muted class="fullSize" id="video">
+        <source src="./avocado.mp4" type="video/mp4">
+        <span>Your browser does not support the video tag.</span>
+      </video>
+    </div>
     <img src="./avocado.svg" alt="avocado" id="avocado" />
   </body>
   <script>

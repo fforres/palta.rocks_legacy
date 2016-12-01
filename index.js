@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     drawing = false;
   });
 
-
   canvas.addEventListener("touchstart", function (e) {
     var touch = e.touches[0];
     var mouseEvent = new MouseEvent("mousedown", {
@@ -42,15 +41,16 @@ document.addEventListener('DOMContentLoaded', function() {
     canvas.dispatchEvent(mouseEvent);
   }, false);
 
+  canvas.addEventListener('mousemove', tryToDraw);
 
-  canvas.addEventListener('mousemove', tryToDraw)
   function tryToDraw(e) {
     if (drawing) {
       var mousePosition = getMousePosition(canvas, e);
       var size = Math.floor(Math.random() * 30) + 20;
-      context.drawImage(image, mousePosition.x, mousePosition.y, size, size);
+      context.drawImage(image, mousePosition.x - 10, mousePosition.y - 10, size, size);
     }
   }
+
   function getMousePosition(canvas, evt) {
     var rect = canvas.getBoundingClientRect();
     return {
@@ -63,15 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
     v.play();
   }
 
+
   if (md.is('iPhone')) {
     mobileNotif.style.display = "flex"
   }
 
-  mobileNotif.addEventListener("mousedown", function() {
-    mobileNotif.style.display = "none";
-    play();
-  });
-  mobileNotif.addEventListener("touchstart", function () {
-    mobileNotif.dispatchEvent(new MouseEvent("mousedown"));
-  }, false);
+  // mobileNotif.addEventListener("mousedown", function() {
+  //   mobileNotif.style.display = "none";
+  //   play();
+  // });
+  // mobileNotif.addEventListener("touchstart", function () {
+  //   mobileNotif.dispatchEvent(new MouseEvent("mousedown"));
+  // }, false);
 });
